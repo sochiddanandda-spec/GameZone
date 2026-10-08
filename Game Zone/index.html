@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GameZone - Free Online Games</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            🎮 GameZone
+        </div>
+
+        <nav>
+            <a href="#" onclick="showHome()">Home</a>
+            <a href="#games">Games</a>
+            <a href="#categories">Categories</a>
+        </nav>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search games..."
+                onkeyup="searchGames()"
+            >
+            🔍
+        </div>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>PLAY FREE ONLINE GAMES</h1>
+
+            <p>
+                Discover exciting games and play instantly.
+            </p>
+
+            <button onclick="scrollToGames()">
+                PLAY NOW
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+    <section class="categories" id="categories">
+
+        <h2>Categories</h2>
+
+        <div class="category-buttons">
+
+            <button onclick="filterCategory('all')">
+                🎮 All
+            </button>
+
+            <button onclick="filterCategory('action')">
+                🔥 Action
+            </button>
+
+            <button onclick="filterCategory('racing')">
+                🏎️ Racing
+            </button>
+
+            <button onclick="filterCategory('sports')">
+                ⚽ Sports
+            </button>
+
+            <button onclick="filterCategory('puzzle')">
+                🧩 Puzzle
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- GAMES -->
+    <main id="games">
+
+        <h2>Popular Games</h2>
+
+        <div class="game-grid" id="gameGrid">
+
+            <!-- GAME 1 -->
+            <div
+                class="game-card"
+                data-category="racing"
+                data-name="Speed Racer"
+                onclick="openGame('Speed Racer')"
+            >
+
+                <div class="game-image racing">
+                    🏎️
+                </div>
+
+                <div class="game-info">
+                    <h3>Speed Racer</h3>
+                    <p>🏎️ Racing</p>
+                </div>
+
+            </div>
+
+
+            <!-- GAME 2 -->
+            <div
+                class="game-card"
+                data-category="sports"
+                data-name="Football Challenge"
+                onclick="openGame('Football Challenge')"
+            >
+
+                <div class="game-image football">
+                    ⚽
+                </div>
+
+                <div class="game-info">
+                    <h3>Football Challenge</h3>
+                    <p>⚽ Sports</p>
+                </div>
+
+            </div>
+
+
+            <!-- GAME 3 -->
+            <div
+                class="game-card"
+                data-category="action"
+                data-name="Space Shooter"
+                onclick="openGame('Space Shooter')"
+            >
+
+                <div class="game-image space">
+                    🚀
+                </div>
+
+                <div class="game-info">
+                    <h3>Space Shooter</h3>
+                    <p>🔥 Action</p>
+                </div>
+
+            </div>
+
+
+            <!-- GAME 4 -->
+            <div
+                class="game-card"
+                data-category="puzzle"
+                data-name="2048"
+                onclick="openGame('2048')"
+            >
+
+                <div class="game-image puzzle">
+                    🧩
+                </div>
+
+                <div class="game-info">
+                    <h3>2048</h3>
+                    <p>🧩 Puzzle</p>
+                </div>
+
+            </div>
+
+
+            <!-- GAME 5 -->
+            <div
+                class="game-card"
+                data-category="action"
+                data-name="Ninja Attack"
+                onclick="openGame('Ninja Attack')"
+            >
+
+                <div class="game-image ninja">
+                    🥷
+                </div>
+
+                <div class="game-info">
+                    <h3>Ninja Attack</h3>
+                    <p>🔥 Action</p>
+                </div>
+
+            </div>
+
+
+            <!-- GAME 6 -->
+            <div
+                class="game-card"
+                data-category="racing"
+                data-name="Drift King"
+                onclick="openGame('Drift King')"
+            >
+
+                <div class="game-image drift">
+                    🚘
+                </div>
+
+                <div class="game-info">
+                    <h3>Drift King</h3>
+                    <p>🏎️ Racing</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- GAME PLAYER -->
+    <section id="gamePlayer" class="game-player">
+
+        <button class="back-button" onclick="closeGame()">
+            ← Back to Games
+        </button>
+
+        <h2 id="gameTitle">
+            Game
+        </h2>
+
+        <div class="game-screen">
+
+            <div id="gameContent">
+
+                <div class="loading-game">
+                    🎮
+                    <h2>Game Loading...</h2>
+                    <p>Your game will appear here.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h3>🎮 GameZone</h3>
+
+        <p>
+            Free online games for everyone.
+        </p>
+
+        <p>
+            © 2026 GameZone
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
